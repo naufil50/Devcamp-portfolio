@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+	layout "portfolio"
 	def index
 		@portfolio_items = Portfolio.all
 	end
@@ -65,7 +66,7 @@ class PortfoliosController < ApplicationController
 										  :subtitle,
 										  :body, 
 										  technologies_attributes: [:name])
-											)
+											
 
 	end
 		
