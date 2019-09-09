@@ -4,7 +4,8 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,17 +13,16 @@
   </head>
 
   <body>
+    
   
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p> 
+    <%= render "shared/portfolio_nav" %>  
+    <%= render "shared/portfolio_head" unless logged_in?(:site_admin)%>  
 
-      <%= render "shared/nav", location: 'top' %>
-
-
-
-      <%= login_helper %>   
+      
        
        <%= yield %>
+
+    <%= render "shared/portfolio_footer" %> 
     
     <%= source_helper("Portfolio") %> 
    
