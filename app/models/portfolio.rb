@@ -20,4 +20,9 @@ class Portfolio < ApplicationRecord
 		
     end
 
+    def self.Position
+    	order("position ASC")
+    	
+    end
+
 end
