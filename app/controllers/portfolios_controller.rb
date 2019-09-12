@@ -1,4 +1,4 @@
-class PortfoliosController < ApplicationController
+	class PortfoliosController < ApplicationController
     before_action :set_portfolio, only: [:show, :edit, :update, :destroy]
     access all: [:show, :index], user: {except: [:destroy, :edit, :update, :new, :create]}, site_admin: :all
 	layout "portfolio"
@@ -69,7 +69,9 @@ class PortfoliosController < ApplicationController
 
 		params.require(:portfolio).permit(:title,
 										  :subtitle,
-										  :body, 
+										  :body,
+										  :main_image,
+										  :thumb_image,								
 										  technologies_attributes: [:name])
 											
 
