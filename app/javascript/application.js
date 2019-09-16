@@ -3,13 +3,14 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 //= require jquery3
+//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require popper
-//= require bootstrap-sprockets
 //= require jquery-ui
 //= require html.sortable
 //= require cocoons
 //= require gritter
+//= require cable 
 //= require turbolinks
 //= require_tree .
 
